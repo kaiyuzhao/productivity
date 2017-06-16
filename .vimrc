@@ -72,7 +72,6 @@ set mouse=a
 syntax on
 set autoread
 filetype indent plugin on
-let python_highlight_all = 1
 
 set background=dark
 colorscheme molokai
@@ -161,8 +160,7 @@ endif
 " SimpleFold related settings # Maybe
 nnoremap <space> za
 vnoremap <space> zf
-let g:indentobject_meaningful_indentation = ["python", "markdown", "ocaml"]
-autocmd FileType python setlocal completeopt-=preview
+let g:indentobject_meaningful_indentation = ["markdown", "ocaml"]
 
 
 if &term == 'xterm' || &term == 'screen'
@@ -224,8 +222,11 @@ autocmd FileType html setlocal sts=2
 " golang
 autocmd FileType go setlocal ts=2 sw=2
 
-" yml
-autocmd FileType yml setlocal ts=2 expandtab
+" yaml
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+" python
+autocmd FileType python setlocal ts=2 sw=2 expandtab autoindent smartindent smarttab
 
 " No backup
 set nobackup
