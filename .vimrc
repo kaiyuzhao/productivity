@@ -37,6 +37,7 @@ Plugin 'fatih/vim-go'
 Plugin 'tomasr/molokai'
 Plugin 'fmoralesc/molokayo'
 Plugin 'chase/vim-ansible-yaml'
+Plugin 'Valloric/YouCompleteMe'
 
 """"""""""""""""""""""""""""""
 " vim-powerline symbols
@@ -65,7 +66,7 @@ set guioptions-=L
 
 
 " General
-
+set timeoutlen=1000 ttimeoutlen=0
 set nu
 set numberwidth=3
 set mouse=a
@@ -226,7 +227,7 @@ autocmd FileType go setlocal ts=2 sw=2
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 " python
-autocmd FileType python setlocal ts=2 sw=2 expandtab autoindent smartindent smarttab
+autocmd FileType python setlocal ts=4 sw=4 expandtab autoindent smartindent smarttab
 
 " No backup
 set nobackup
